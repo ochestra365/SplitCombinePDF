@@ -30,33 +30,112 @@ namespace Split_Combine
         private void InitializeComponent()
         {
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.txtFileName = new System.Windows.Forms.TextBox();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtStart = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtEnd = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(520, 198);
+            this.simpleButton1.Location = new System.Drawing.Point(12, 32);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(188, 23);
             this.simpleButton1.TabIndex = 0;
-            this.simpleButton1.Text = "simpleButton1";
+            this.simpleButton1.Text = "Merge";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // txtFileName
+            // 
+            this.txtFileName.Location = new System.Drawing.Point(67, 143);
+            this.txtFileName.Name = "txtFileName";
+            this.txtFileName.Size = new System.Drawing.Size(100, 21);
+            this.txtFileName.TabIndex = 1;
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Location = new System.Drawing.Point(67, 226);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(188, 23);
+            this.simpleButton2.TabIndex = 2;
+            this.simpleButton2.Text = "Split";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(4, 146);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 12);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "NAME :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(4, 173);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 12);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "START : ";
+            // 
+            // txtStart
+            // 
+            this.txtStart.Location = new System.Drawing.Point(67, 170);
+            this.txtStart.Name = "txtStart";
+            this.txtStart.Size = new System.Drawing.Size(100, 21);
+            this.txtStart.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(4, 202);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 12);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "START : ";
+            // 
+            // txtEnd
+            // 
+            this.txtEnd.Location = new System.Drawing.Point(67, 199);
+            this.txtEnd.Name = "txtEnd";
+            this.txtEnd.Size = new System.Drawing.Size(100, 21);
+            this.txtEnd.TabIndex = 7;
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtEnd);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtStart);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.simpleButton2);
+            this.Controls.Add(this.txtFileName);
             this.Controls.Add(this.simpleButton1);
             this.Name = "FrmMain";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.TextBox txtFileName;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtStart;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtEnd;
     }
 }
 

@@ -34,5 +34,16 @@ namespace Split_Combine
                 pdf.Merge(this.ListPDF);
             }
         }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(this.txtEnd.Text) && !string.IsNullOrEmpty(this.txtFileName.Text.Trim()) && !string.IsNullOrEmpty(this.txtStart.Text))
+            {
+                if (!int.TryParse(this.txtEnd.Text, out int end)) { return; }
+                if (!int.TryParse(this.txtStart.Text, out int start)) { return; }
+                PDFController pdf = new PDFController();
+                pdf.SplitAndSaveInterval("merge.pdf", Application.StartupPath,end, start, this.txtFileName.Text.Trim());
+            }
+        }
     }
 }

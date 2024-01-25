@@ -61,6 +61,37 @@ namespace Split_Combine.Classes.PDF
                 Console.WriteLine($"TIME : {DateTime.Now}.\n{ex}");
             }
         }
+        public void SplitAndSaveInterval(string pdfFilePath, string outputPath, int startPage, int interval, string pdfFileName)
+        {
+            try
+            {
+                FileInfo file = new FileInfo(pdfFilePath);
+                if (!file.Exists) { return; }
+                PdfReader reader = new PdfReader(pdfFilePath);
+                Document document = new Document();
+                PdfCopy copy = new PdfCopy(document, new FileStream(outputPath + "\\" + pdfFileName + ".pdf", FileMode.Create));
+                document.Open();
 
+                for (int pagenumber = startPage; pagenumber < (startPage + interval); pagenumber++)
+                {
+                    if (reader.NumberOfPages >= pagenumber)
+                    {
+                        copy.AddPage(copy.GetImportedPage(reader, pagenumber));
+                    }
+                    else
+                    {
+                        break;
+                    }
+
+                }
+                document.Close();
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"{ex}");
+            }
+
+        }
     }
 }
