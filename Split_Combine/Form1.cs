@@ -16,5 +16,10 @@ namespace Split_Combine
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
